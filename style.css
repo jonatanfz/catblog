@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --hue:250;
+  --color-brand-explorer-dark: #065e7c;
+  --color-brand-explorer-light: #387e96;
+  --color-base-white: #fff;
+  --color-base-gray-050: hsl(var(--hue), 100%, 98%);
+  --color-base-gray-800: hsl(var(--hue), 6%, 13%);
+  --color-base-gray-900: hsl(var(--hue), 5%, 7%);
+}
+
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  background: var(--color-base-gray-050);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  margin-inline: auto;
+  max-width: 38rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+  background-color: var(--color-brand-explorer-dark);
+  
+}
+
+header form {
+  flex: 1;
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+
+  margin: 1.6rem 0 1.6rem 2.8rem;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.2rem;
+
+  background-color: var(--color-brand-explorer-light);
+  border: 0;
+  border-radius: 0.4rem;
+  margin: 1.2rem 0 1.2rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--color-base-white);
+  opacity: 80%;
+  border: 0;
+}
+
+.input-wrapper input:focus {
+  outline: 0;
+  color: var(--color-base-white);
+}
+
+.avatar {
+  max-width: 100%;
+  width: 4.2rem;
+  border-radius: 50%;
+
+  margin: 1.6rem 2.8rem 1.6rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.36rem;
+  font-weight: 700;
+  color: var(--color-base-gray-800);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-base-gray-800);
+}
+
+.title {
+  display: inline;
+  justify-content: space-between;
+}
+
+.action {
+  display: flex;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.matter {
+  padding: 0 2.2rem;
+}
+
+.text {
+  margin-top: 3rem;
+}
+
+.gallery {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.container {
+  padding: 0 2.2rem;
+}
+
+h1 {
+  margin-top: 3rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 15.1rem 1fr;
+}
+
+.item img {
+  max-height: 100%;
+  width: 15rem;
+  margin-top: 1rem;
+  object-fit: cover;
+
+  transition: transform 500ms;
+}
+
+.item img:hover {
+  transform: scaleX(0.9);
+  filter: grayscale(20%);
+}
+
+.details h2 {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.details p {
+  font-size: 1.4rem;
+}
+
+.details {
+  margin-left: 1.6rem;
+}
+
+footer {
+  background-color: var(--color-brand-explorer-light);
+  color: var(--color-base-white);
+  text-align: center;
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  margin-top: 3.9rem;
+}
+
+@media (min-width: 400px) {
+ .app {
+  max-width: 77rem;
+  display: flex;
+ }
+}
+
+@media (min-width: 770px) {
+  .app {
+    max-width: 144rem;
+    display: grid;
+    grid-template-areas:
+      "H H H"
+      "M M A"
+      "F F F";
+  }
+
+  body {
+    background: var(--color-base-gray-050);
+  }
+
+  header {
+    grid-area: H;
+    height: 7.2rem;
+  }
+
+  header nav {
+    padding: 0 5rem;
+  }
+
+  main {
+    grid-area: M;
+    width: 80rem;
+    margin: 0 3.4rem 0 5rem;
+  }
+
+  main > img {
+    width: 80rem;
+  }
+
+  .container {
+    padding: 0 6rem 0 0;
+  }
+  
+  aside {
+    grid-area: A;
+  }
+  
+  .container h1 {
+    margin-bottom: 3.2rem;
+  }
+
+  footer {
+    margin-top: 3.9rem;
+    grid-area: F;
+    height: 6.4rem;
+  }
+
+  main, aside {
+    margin-top: 4.4rem;
+  }
+
+  .title {
+    display: flex;
+    padding: 0;
+    align-items: center;
+  }
+
+  .title > h1 {
+    margin-top: 3rem;
+  }
+
+  .matter {
+    padding: 0;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 61.5rem;
+    width: 38.4rem;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.item {
+  --delay: .3s;
+  animation: show .4s var(--delay) backwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+}
