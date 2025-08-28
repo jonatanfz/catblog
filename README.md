@@ -1,9 +1,5 @@
 <h1 align="center">🐾 Blog de Gatos</h1>
 
-<p align="center">
-  <img alt="Blog de Gatos Preview" src=".github/preview.png" width="100%">
-</p>
-
 ---
 
 ## 📖 Sobre o projeto
@@ -48,11 +44,10 @@ A proposta do layout é ser **clean, responsivo e moderno**, destacando:
 ---
 
 ## 📸 Pré-visualização
-### 💻 Desktop
-<img src=".github/preview-desktop.png" width="85%">
 
-### 📱 Mobile
-<img src=".github/preview-mobile.png" width="35%">
+<p align="center">
+  <img alt="Blog de Gatos Preview" src=".github/preview.png" width="100%">
+</p>
 
 ---
 
